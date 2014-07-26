@@ -6,11 +6,11 @@
  */
 
 $(document).ready(function() {
-  $('.item-comment textarea').focus(function(event) {
-    $('.item-comment .comment-btn').fadeIn(100);
+  $('.item-comment-box textarea').focus(function(event) {
+    $('.item-comment-box .comment-btn').fadeIn(100);
   });
 
-  $('.item-comment textarea').blur(function(event) {
-    $('.item-comment .comment-btn').fadeOut(100);
+  $('.item-comment-box textarea').blur(function(event) {
+    $('.item-comment-box .comment-btn').fadeOut(100);
   });
 });

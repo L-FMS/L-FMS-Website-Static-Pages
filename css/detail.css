@@ -47,7 +47,7 @@
 /**
  * Comment
  */
-.item-comment textarea {
+.item-comment-box textarea {
   resize: none;
   height: 42px;
 
@@ -57,11 +57,31 @@
        -o-transition: height .25s ease;
           transition: height .25s ease;
 }
-.item-comment textarea:focus {
+.item-comment-box textarea:focus {
   height: 86px;
 }
 
-.item-comment .comment-btn {
+.item-comment-box .comment-btn {
   display: none;
 }
 
+.item-comment-list {
+  margin-top: 15px;
+}
+.item-comment-list .item-comment {
+  border-top: 1px solid #f7f7f7;
+  padding: 15px 65px 15px 15px;
+}
+.item-comment-list .item-comment:hover {
+  background-color: #f7f7f7;
+}
+.item-comment-list .item-comment .avatar {
+  float: left;
+}
+.item-comment-list .item-comment .item-comment-content {
+  margin-left: 65px;
+}
+.item-comment-list .item-comment .item-comment-content p {
+  margin: 0;
+  padding: 0;
+}
