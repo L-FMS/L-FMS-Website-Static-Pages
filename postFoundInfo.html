@@ -48,12 +48,7 @@
         </div>
         <div class="form-group">
           <label for="post-time" style="color: #bfc9ca;">Time</label>
-          <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="post-time" data-link-format="yyyy-mm-dd">
-            <input class="form-control" size="16" type="text" value="" readonly>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-          </div>
-          <input type="hidden" class="form-control login-field" placeholder="Time" id="post-time" required>
+          <input type="date" class="form-control login-field" placeholder="Time" id="post-time" name="dateTimeString" required>
           <label for="post-time" class="login-field-icon fui-time"></label>
         </div>
         <div class="form-group">
@@ -79,48 +74,13 @@
     <!-- Bootstrap js -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
+    <!-- Bootstrap Select js -->
     <script src="js/bootstrap-select.js"></script>
     <script type="text/javascript">
       $("select").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
     </script>
-
+    
+    <!-- Bootstrap Filestyle js -->
     <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script>
-
-    <!-- Datetimepicker core Javascript -->
-    <script type="text/javascript" src="bootstrap/datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="bootstrap/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
-    <script type="text/javascript">
-      Date.prototype.format = function(format) //author: meizz 
-      { 
-          var o = { 
-              "M+" : this.getMonth()+1, //month 
-              "d+" : this.getDate(),    //day 
-              "h+" : this.getHours(),   //hour 
-              "m+" : this.getMinutes(), //minute 
-              "s+" : this.getSeconds(), //second 
-              "q+" : Math.floor((this.getMonth()+3)/3),  //quarter 
-              "S" : this.getMilliseconds() //millisecond 
-          } 
-          if(/(y+)/.test(format)) format=format.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
-          for(var k in o) if(new RegExp("("+ k +")").test(format)) format = format.replace(RegExp.$1, RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length)); 
-          return format; 
-      }
-
-      /*
-       * Datetimepicker init
-       * --------------------------------------------------
-       */
-      $('.form_date').datetimepicker({
-          language:  'zh-CN',
-          weekStart: 1,
-          todayBtn:  1,
-          autoclose: 1,
-          todayHighlight: 1,
-          startView: 2,
-          minView: 2,
-          forceParse: 0,
-          startDate: new Date().format('yyyy-MM-dd')
-      });
-    </script>
   </body>
 </html>
